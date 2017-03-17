@@ -30,9 +30,10 @@ public class DresserFrontEnd {
 					break;
 
 				case 2:
-					type = getType();
-					color = getColor();
-					dresser.remove(new Clothing(type, color));
+// Commented out temporarily to reduce the number of compile time errors.
+//					type = getType();
+//					color = getColor();
+//					dresser.remove(new Clothing(type, color));
 
 					break;
 
