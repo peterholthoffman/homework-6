@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import Clothing;
 
 public class DresserFrontEnd {
 
@@ -10,8 +9,8 @@ public class DresserFrontEnd {
 
 
 		Integer cmd = 0;
-		Type type;
-		Color color;
+		String type;
+		String color;
 
 		while (true) {
 			System.out.println("Welcome to the dresser!");
@@ -47,16 +46,16 @@ public class DresserFrontEnd {
 		}
 	}
 
-	private static Type getType() {
+	private static String getType() {
 		System.out.println("Enter the type");
 		System.out.println("It may be undergarment, socks, stockings, top, bottom, or cape");
-		return (Type)reader.next();
+		return reader.next();
 	}
 
-	private static Color getColor() {
+	private static String getColor() {
 		System.out.println("Enter a color");
 		System.out.println("It may be brown, pink, orange, green, blue, purple, or grey");
-		return (Color)reader.next();
+		return reader.next();
 	}
 
 }

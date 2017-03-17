@@ -1,42 +1,40 @@
 public class Clothing {
-	enum Type {UNDERGARMENT, SOCKS, STOCKINGS, TOP, BOTTOM, CAPE};
-	enum Color {BROWN, RED, PINK, ORANGE, GREEN, BLUE, PURPLE, GREY};
-	private Type type;
-	private Color color;
+	private String type;
+	private String color;
 
 	public Clothing()
 	{
-		this.type = Type.CAPE;
-		this.color = Color.GREY;
+		this.type = "";
+		this.color = "";
 	}
 	
-	public Clothing(Type aType, Color aColor)
+	public Clothing(String aType, String aColor)
 	{
 		this.setType(aType);
 		this.setColor(aColor);
 	}
 	
-	public Type getType()
+	public String getType()
 	{
 		return this.type;
 	}
 	
-	public Color getColor()
+	public String getColor()
 	{
 		return this.color;
 	}
 	
-	public void setType(Type aType)
+	public void setType(String aType)
 	{
 		this.type = aType;
 	}
 	
-	public void setColor(Color aColor)
+	public void setColor(String aColor)
 	{
 		this.color = aColor;
 	}
 	
-	public String toString(Type aType, Color aColor)
+	public String toString(String aType, String aColor)
 	{
 		return "Type: " + this.type + ", Color: " + this.color;
 	}
