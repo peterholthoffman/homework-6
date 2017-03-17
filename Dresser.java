@@ -1,13 +1,17 @@
 
 public class Dresser {
-	private Clothing[][] clothes;
+	private String[][] clothes;
 	
 	public Dresser()
 	{
-		this.clothes = new Clothing[5][10];
+		this.clothes = new String[4][9];
 	}
-	
-	public Dresser(Clothing aDrawer, Clothing aItem)
+
+	//
+	// This constructor wasn't asked for?
+	//
+/*
+ 	public Dresser(Clothing aDrawer, Clothing aItem)
 	{
 		this.clothes = clothes[aDrawer][aItem];
 		for(int i = 0; i < clothes.length; i++) //drawer
@@ -18,7 +22,8 @@ public class Dresser {
 			}
 		}
 	}
-	
+*/
+
 	public void addItem(Clothing aItem)
 	{
 		for(int i = 0; i < clothes.length; i++)

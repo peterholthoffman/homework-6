@@ -25,16 +25,11 @@ public class DresserFrontEnd {
 				case 1:
 					type = getType();
 					color = getColor();
-					dresser.addItem(new Clothing(type, color));
+					dresser.addItem(0, new Clothing(type, color));	// I think the zero will need to be a tracked index of which drawer is meant.
 
 					break;
 
 				case 2:
-// Commented out temporarily to reduce the number of compile time errors.
-//					type = getType();
-//					color = getColor();
-//					dresser.remove(new Clothing(type, color));
-
 					break;
 
 				case 3:
