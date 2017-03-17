@@ -21,10 +21,10 @@ public class Clothing {
 		Boolean colorFound=false;
 
 		for (int i=0; i < typeValues.length; i++) {
-			if (aType == typeValues[i]) typeFound=true;
+			if (aType.equals(typeValues[i])) typeFound=true;
 		}
 		for (int i=0; i < colorValues.length; i++) {
-			if (aColor == colorValues[i]) colorFound=true;
+			if (aColor.equals(colorValues[i])) colorFound=true;
 		}
 
 		if (!typeFound) {
@@ -37,6 +37,7 @@ public class Clothing {
 		if (typeFound && colorFound) {
 			this.setType(aType);
 			this.setColor(aColor);
+			System.out.println("DEBUG: Added this -- " + this.toString());
 		}
 	}
 
