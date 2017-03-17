@@ -25,7 +25,7 @@ public class DresserFrontEnd {
 				case 1:
 					type = getType();
 					color = getColor();
-					dresser.addItem(0, new Clothing(type, color));	// I think the zero will need to be a tracked index of which drawer is meant.
+					dresser.addItem(new Clothing(type, color));
 
 					break;
 
