@@ -1,6 +1,10 @@
 public class Clothing {
+
 	private String type;
+	private String[] typeValues={"undergarment", "socks", "stockings", "top", "bottom", "cape"};
+	
 	private String color;
+	private String[] colorValues={"brown", "red", "pink", "orange", "green", "blue", "purple", "grey"};
 
 	//
 	// Constructors
@@ -13,8 +17,27 @@ public class Clothing {
 	
 	public Clothing(String aType, String aColor)
 	{
-		this.setType(aType);
-		this.setColor(aColor);
+		Boolean typeFound=false;
+		Boolean colorFound=false;
+
+		for (int i=0; i < typeValues.length; i++) {
+			if (aType == typeValues[i]) typeFound=true;
+		}
+		for (int i=0; i < colorValues.length; i++) {
+			if (aColor == colorValues[i]) colorFound=true;
+		}
+
+		if (!typeFound) {
+			System.out.println("Not a valid type: " + aType);
+		}
+		if (!colorFound) {
+			System.out.println("Not a valid color: " + aColor);
+		}
+
+		if (typeFound && colorFound) {
+			this.setType(aType);
+			this.setColor(aColor);
+		}
 	}
 
 	//
@@ -46,7 +69,7 @@ public class Clothing {
 	//
 	// Methods
 	//
-	public String toString(String aType, String aColor)
+	public String toString()
 	{
 		return "Type: " + this.type + ", Color: " + this.color;
 	}
