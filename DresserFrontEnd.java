@@ -36,6 +36,7 @@ public class DresserFrontEnd {
 					break;
 
 				case 9:
+					System.out.println("Bye!");
 					System.exit(0);
 
 			}
