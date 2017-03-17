@@ -37,7 +37,7 @@ public class Clothing {
 		if (typeFound && colorFound) {
 			this.setType(aType);
 			this.setColor(aColor);
-			System.out.println("DEBUG: Added this -- " + this.toString());
+			System.out.println("DEBUG: " + this.toString());
 		}
 	}
 
