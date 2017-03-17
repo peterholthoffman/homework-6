@@ -77,6 +77,6 @@ public class Clothing {
 	
 	public boolean equals(Clothing clothing)
 	{
-		return this.type == clothing.getType() && this.color == clothing.getColor(); 
+		return this.type.equals(clothing.getType()) && this.color.equals(clothing.getColor()); 
 	}
 }
