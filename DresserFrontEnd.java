@@ -25,7 +25,7 @@ public class DresserFrontEnd {
 				case 1:
 					type = getType();
 					color = getColor();
-					dresser.addItem(new Clothing(type, color));
+					dresser.add(new Clothing(type, color));
 
 					break;
 
