@@ -1,3 +1,17 @@
+/*
+ * Write a class called Clothing
+ * Instance Variables
+ * 	Type – This can only be Undergarment, Socks, Stockings, Top, Bottom, and Cape
+ * 	Color – This can only be Brown, Red, Pink, Orange, Green, Blue, Purple, and Grey
+ * Constructors
+ * 	Default
+ * 	Parameterized
+ * Accessors and Mutators for the instance variables
+ * 	Make sure to check for valid values in the mutator
+ * Methods
+ * 	toString: Takes in no parameters and returns a string with the Type and Color of the garment
+ * 	equals: Takes an instance of Clothing as a parameters and returns true only if the parameters are equal
+ */
 public class Clothing {
 
 	private String type;
@@ -20,19 +34,8 @@ public class Clothing {
 		Boolean typeFound=false;
 		Boolean colorFound=false;
 
-		for (int i=0; i < typeValues.length; i++) {
-			if (aType.equals(typeValues[i])) typeFound=true;
-		}
-		for (int i=0; i < colorValues.length; i++) {
-			if (aColor.equals(colorValues[i])) colorFound=true;
-		}
-
-		if (!typeFound) {
-			System.out.println("Not a valid type: " + aType);
-		}
-		if (!colorFound) {
-			System.out.println("Not a valid color: " + aColor);
-		}
+		typeFound = validateType(aType);
+		colorFound = validateColor(aColor);
 
 		if (typeFound && colorFound) {
 			this.setType(aType);
@@ -59,12 +62,12 @@ public class Clothing {
 	//
 	public void setType(String aType)
 	{
-		this.type = aType;
+		if (validateType(aType)) this.type = aType;
 	}
 	
 	public void setColor(String aColor)
 	{
-		this.color = aColor;
+		if (validateColor(aColor)) this.color = aColor;
 	}
 
 	//
@@ -78,5 +81,32 @@ public class Clothing {
 	public boolean equals(Clothing clothing)
 	{
 		return this.type.equals(clothing.getType()) && this.color.equals(clothing.getColor()); 
+	}
+	
+	private Boolean validateType(String aType) {
+		
+		Boolean typeFound = false;
+		
+		for (int i=0; i < typeValues.length; i++) {
+			if (aType.equals(typeValues[i])) typeFound=true;
+		}
+		if (!typeFound) {
+			System.out.println("Not a valid type: " + aType);
+		}
+		return typeFound;
+	}
+	
+	private Boolean validateColor(String aColor)
+	{
+		Boolean colorFound = false;
+		
+		for (int i=0; i < colorValues.length; i++) {
+			if (aColor.equals(colorValues[i])) colorFound=true;
+		}
+
+		if (!colorFound) {
+			System.out.println("Not a valid color: " + aColor);
+		}
+		return colorFound;
 	}
 }
